@@ -1,0 +1,172 @@
+.BlogLayoutContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: var(--food);
+    padding: 1em;
+    height: 4em;
+}
+
+main {
+    display: flex;
+    height: 100%;
+}
+
+.content {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+
+
+.left {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.left .menuBar {
+    color: white;
+    font-size: 1.7em;
+}
+
+.left:hover {
+    cursor: pointer;
+}
+
+.left img {
+    width: 2em;
+}
+
+.left h1 {
+    font-size: 2.5em;
+    color: white;
+}
+
+.right {
+    display: flex;
+    gap: 2em;
+    position: relative;
+}
+
+.right:hover {
+    cursor: pointer;
+}
+
+.right img {
+    width: 3em;
+    height: 3em;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.username {
+    color: white;
+}
+
+@media (max-width: 500px) {
+    main {
+        position: relative;
+    }
+
+    .slideNav {
+        top: 0;
+        left: 0;
+        position: absolute;
+    }
+}
+
+/* .slideNav Styles */
+
+.slideNav {
+    height: 100%;
+    background-color: #e2e2e2;
+    width: 20em;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid rgba(0, 0, 0, 0.144);
+    /* transition: transform var(--animation-dur) ease-out; */
+    transition: width var(--animation-dur) ease-out;
+    justify-content: center;
+    position: relative;
+}
+
+.slideNav.slide {
+    width: 0;
+    /* transform: translateX(-100%); */
+    overflow: hidden;
+}
+
+.slideNav * {
+    transition: opacity var(--animation-dur) ease;
+}
+
+.slideNav.slide * {
+    opacity: 0;
+}
+
+.slideNav .addPostBtn {
+    top: 0;
+    position: absolute;
+    border: none;
+    outline: none;
+    background-color: var(--food);
+    color: white;
+    padding: 0.5em 1em;
+    border-radius: 2em;
+    font-size: 1.08em;
+    width: 70%;
+    align-self: center;
+    margin-top: 3em;
+}
+
+.slideNav .addPostBtn:hover {
+    cursor: pointer;
+    background-color: var(--main-hover);
+}
+
+.slideNav ul {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: flex-start;
+}
+
+.slideNav ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8em;
+}
+
+.slideNav ul li .icons {
+    color: rgb(66, 66, 66);
+    font-size: 1.5em;
+}
+
+.slideNav ul li {
+    cursor: pointer;
+    font-family: "poppins";
+    width: 100%;
+    display: flex;
+    padding: 0.5em 2em;
+    justify-content: flex-start;
+}
+
+.slideNav ul li:hover {
+    background-color: #d6d6d6;
+}
+
+.slideNav ul li.currentPage {
+    background-color: #c2c2c2;
+}

@@ -1,0 +1,107 @@
+.PostBlankContainer {
+    padding: 1em;
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    animation: pulse 1.5s infinite ease-in-out;
+    width: 95%;
+}
+
+.header,
+.body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.avatar,
+.displayName,
+.right,
+.postTitle,
+.lineOne,
+.lineTwo,
+.lineThree,
+.button{
+    background: linear-gradient(90deg, #bdbdbd 25%, #929191 50%, #bdbdbd 75%);
+    background-size: 200% 100%;
+    animation: shimmer 2.6s infinite linear;
+    border-radius: 0.5em;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.avatar {
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+}
+
+.displayName {
+    width: 6em;
+    height: 1em;
+}
+
+.right {
+    width: 3em;
+    height: 1em;
+}
+
+.postTitle {
+    width: 40%;
+    height: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.postBody {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    width: 100%;
+}
+
+.lineOne,
+.lineTwo,
+.lineThree {
+    height: 0.8em;
+}
+
+.lineOne {
+    width: 90%;
+}
+
+.lineTwo {
+    width: 95%;
+}
+
+.lineThree {
+    width: 80%;
+}
+
+.button {
+    width: 5em;
+    height: 1.5em;
+    align-self: flex-start;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}

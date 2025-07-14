@@ -1,0 +1,72 @@
+.HomeNavContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--food);
+    padding: 0.5em 2em;
+    transition: background-color var(--animation-dur) ease;
+}
+
+.left {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.left:hover {
+    cursor: pointer;
+}
+
+.left img {
+    width: 3em;
+}
+
+.left h1 {
+    font-size: 2.5em;
+    color: white;
+}
+
+.right {
+    display: flex;
+    gap: 2em;
+}
+
+.right a {
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+    font-size: 1.2em;
+    position: relative;
+}
+
+.right a::after {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    width: 105%;
+    height: 0.3em;
+    transform-origin: top right;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+    top: 105%;
+    right: -2.5%;
+}
+
+.right a:hover::after {
+    transform-origin: top left;
+    transform: scaleX(1);
+}
+
+.right a.currentPage::after {
+    transform: scaleX(1);
+}
+
+.right a.currentPage::after {
+    position: absolute;
+    content: '';
+    width: 105%;
+    height: 0.3em;
+    background-color: #fff;
+    top: 105%;
+    right: -2.5%;
+}

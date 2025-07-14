@@ -1,0 +1,96 @@
+.LoginContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.formContainer {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    width: 40%;
+    padding: 1em 2em 1em 2em;
+    box-shadow: 3px 0 20px rgba(0, 0, 0, 0.281);
+    background-color: var(--main);
+    margin: 0;
+    background-color: rgb(235, 235, 235);
+}
+
+.form .h1 {
+    margin-bottom: 0.5em;
+    color: var(--food);
+    font-size: 4em;
+    transition: color var(--animation-dur) ease;
+}
+
+.form .input {
+    outline: 1px solid var(--food);
+    border: none;
+    padding: 0.4em 0.8em;
+    font-size: 1.1em;
+    color: black;
+    border-radius: 0.1em;
+    transition: outline var(--animation-dur) ease;
+    width: 100%;
+}
+
+.form .input:focus {
+    outline: 2px solid var(--main-hover);
+}
+
+.form .input.error {
+    outline: 2px solid rgb(240, 27, 27) !important;
+}
+
+.form .input.success {
+    outline: 2px solid rgb(52, 240, 27) !important;
+}
+
+.form .subBtn {
+    font-size: 1.4em;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    padding: 0.6em 0.8em;
+    color: white;
+    cursor: pointer;
+    background-color: var(--food) !important;
+    transition: background-color var(--animation-dur) ease;
+}
+
+.form .p {
+    color: #757575;
+}
+
+.form .p .a {
+    color: #535353;
+}
+
+.successMessage {
+    color: green;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin: 10px 0;
+}
+
+label {
+    /* margin-bottom: 0.5em; */
+    display: flex;
+    flex-direction: column;
+    width: 15em;
+}
+
+.errorMessage {
+    /* visibility: hidden; */
+    color: var(--error-color);
+}

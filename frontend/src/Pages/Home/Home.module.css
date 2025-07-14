@@ -1,0 +1,89 @@
+.HomeContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hero .text {
+    padding: 2em;
+}
+
+.hero .visual {
+    padding: 0 2em;
+}
+
+.text h1 {
+    font-size: 4em;
+    line-height: 1em;
+}
+
+.text p {
+    font-size: 1.2em;
+    margin-top: 1em; 
+}
+
+.text button {
+    border: none;
+    outline: none;
+    padding: 0.6em 1em;
+    background-color: var(--main);
+    color: white;
+    font-size: 1.2em;
+    font-weight: 500;
+    border-radius: 0.2em;
+    margin-top: 3em;
+    cursor: pointer;
+    transition: background-color var(--animation-dur) ease;
+}
+
+img.imgVisual {
+    position: absolute;
+    height: 30em;
+    bottom: -10%;
+    left: 50%;
+    transform: translateX(-50%) translateY(50%);
+    align-self: center;
+    border-top-left-radius: 0.4em;
+    border-top-right-radius: 0.4em;
+    box-shadow: 0 20px 50px 4px rgba(0, 0, 0, 0.644);
+    overflow: hidden;
+    object-fit: cover;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(100%) translateX(-50%);
+    }
+
+    to {
+        transform: translateY(50%) translateX(-50%);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateY(50%) translateX(-50%);
+    }
+
+    to {
+        transform: translateY(100%) translateX(-50%);
+    }
+}
+
+.animateSlide {
+    animation: slideIn 0.4s ease;
+}
+
+.animateOut {
+    animation: slideOut 0.41s ease;
+}

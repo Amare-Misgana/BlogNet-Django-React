@@ -1,0 +1,92 @@
+.PostContainer {
+    background-color: #eeeeee;
+    border: 1px solid #cccccc;
+    border-radius: 0.3em;
+    padding: 1.5em;
+    margin-bottom: 2em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+    position: relative;
+    width: 95%;
+}
+
+.PostContainer:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+
+.left img {
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    color: #dd828a;
+    font-weight: bold;
+}
+
+.right.active {
+    color: #e63946;
+}
+
+.right .smallContainer {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    cursor: pointer;
+}
+
+.right p {
+    font-size: 1.1em;
+    color: #e63946;
+}
+
+.body h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.body p {
+    color: #444;
+    line-height: 1.6;
+}
+
+button {
+    margin-top: 1em;
+    padding: 0.6em 1.2em;
+    border: none;
+    background-color: var(--main);
+    color: white;
+    border-radius: 0.3em;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--main-hover);
+}
+
+h3 {
+    position: absolute;
+    bottom: 0.7em;
+    right: 0.7em;
+    color: rgba(75, 75, 75, 0.74);
+}

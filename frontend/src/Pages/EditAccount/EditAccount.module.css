@@ -1,0 +1,61 @@
+.EditAccountContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    height: 100%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(226, 226, 226);
+    border: 1px solid var(--border-color);
+    padding: 2em;
+    align-items: center;
+    gap: 1em;
+}
+
+.form h1 {
+    color: var(--food);
+    font-size: 4.5em;
+    margin-bottom: 0.7em;
+}
+
+.avatarReview {
+    width: 15em;
+    height: 15em;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px dashed var(--food);
+}
+
+.avatarReview:hover {
+    cursor: pointer;
+}
+
+.form .displayName {
+    padding: 0.6em 1em;
+    font-size: 1.2em;
+    border: 1px solid var(--food);
+    border-radius: 0.2em;
+    width: 100%;
+}
+
+.form .displayName:focus {
+    outline: 2px solid var(--food);
+}
+
+.form .editBtn {
+    display: flex;
+    justify-content: center;
+    border-radius: 0.2em;
+    align-items: center;
+    gap: 0.7em;
+    border: none;
+    background-color: var(--food);
+    color: white;
+    font-size: 1.2em;
+    padding: 0.6em 1em;
+    width: 100%;
+}

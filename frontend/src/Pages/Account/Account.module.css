@@ -1,0 +1,101 @@
+.AccountContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+.sideBtn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0.4em;
+}
+
+.sideBtn button {
+    border: none;
+    outline: none;
+    border-radius: 0.3em;
+    background-color: var(--food);
+    padding: 0.3em 0.7em;
+    color: white;
+    font-size: 1.08em;
+    display: flex;
+    gap: 0.2em;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sideBtn button:hover {
+    cursor: pointer;
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    gap: 4em;
+    background-color: rgb(241, 241, 241);
+    padding: 2em;
+    border-radius: 0.3em;
+    border: 1px solid var(--border-color);
+}
+
+.userInfo .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.userInfo .left img {
+    width: 10em;
+    height: 10em;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px dashed var(--food);
+}
+
+.userInfo .left .displayName {
+    font-size: 2.3em;
+}
+
+.userInfo .right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1em;
+}
+
+.card {
+    width: 12em;
+    height: 6em;
+    background-color: var(--food);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+    border-radius: 0.2em;
+    position: relative;
+}
+
+.card .discr {
+    position: absolute;
+    top: 5%;
+    color: white;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.card .icons {
+    color: white;
+    font-size: 2em;
+}
+
+.card .value {
+    color: white;
+    font-weight: 500;
+    font-size: 1.2em;
+}

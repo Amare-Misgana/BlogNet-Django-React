@@ -1,0 +1,183 @@
+.AddPostContainer {
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+:root {
+    --background-color: #e2e2e2;
+}
+
+.form {
+    width: 40vw;
+    background-color: var(--background-color);
+    display: flex;
+    padding: 0 1em;
+    flex-direction: column;
+    gap: 1.4em;
+}
+
+.form h1 {
+    margin-bottom: 1em;
+    font-size: 3.5em;
+    color: var(--main);
+}
+
+.form button {
+    background-color: var(--main);
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 1.1em;
+    padding: 0.3em 0.5em;
+    display: inline;
+    width: 40%;
+    border-radius: 0.1em;
+}
+
+.postImgLabel {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    flex-direction: row;
+}
+
+.postImgLabel span {
+    width: 60%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+label {
+    position: relative;
+}
+
+span {
+    color: var(--placeholder);
+}
+
+.postBodyLabel span {
+    position: absolute;
+    top: 0.2em;
+    left: 0.4em;
+    background-color: var(--background-color);
+    transition: all 0.4s ease;
+}
+
+
+.postTitleLabel span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0.4em;
+    background-color: var(--background-color);
+    transition: all 0.4s ease;
+}
+
+.postTitleLabel input {
+    border: 1px solid var(--main);
+    padding: 0.4em 0.7em;
+    font-size: 1.1em;
+    border-radius: 0.1em;
+    background-color: var(--background-color);
+}
+
+.postTitleLabel input:focus {
+    outline: 2px solid var(--main);
+}
+
+.postTitleLabel:has(input:focus) span,
+.postTitleLabel input:not(:placeholder-shown)+span {
+    top: -0.5em;
+    font-size: 0.9em;
+}
+
+.postTitleColorLabel {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.postTitleColorLabel .row {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.postBodyLabel:has(textarea:focus) span,
+.postBodyLabel textarea:not(:placeholder-shown)+span {
+    top: -1.1em;
+    font-size: 0.9em;
+}
+
+.postBodyLabel textarea {
+    border: 1px solid var(--main);
+    resize: vertical;
+    max-height: 10em;
+    border-radius: 0.1em;
+    background-color: var(--background-color);
+    padding: 0.4em 0.7em;
+}
+
+.postBodyLabel textarea:focus {
+    outline: 2px solid var(--main);
+}
+
+/* Preview Css  */
+
+.preview {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    padding: 0 1em;
+}
+
+.preview h1 {
+    font-size: 3.5em;
+    color: var(--main);
+}
+
+.preview .container {
+    display: flex;
+    flex-direction: column;
+    outline: 2px solid var(--main);
+}
+
+.container .hero {
+    border-bottom: 2px solid var(--main);
+    position: relative;
+    height: 15em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero img {
+    position: absolute;
+    width: 100%;
+    /* opacity: 0.6; */
+}
+
+.hero .postTitle {
+    position: absolute;
+    bottom: 0;
+    font-size: 3em;
+    width: 35vw;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.container .postBody {
+    padding: 0.4em;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 5.8em;
+    font-size: 1.1em;
+    white-space: pre-wrap;
+}
